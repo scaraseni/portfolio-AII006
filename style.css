@@ -9,23 +9,23 @@ body {
 }
 
 .container {
-    width: 98%;
-    max-width: 1700px; /* Еще шире для ноутбука */
-    padding: 60px 0;
+    width: 95%; /* Чуть сузили для компактности */
+    max-width: 1200px; /* Уменьшили с 1700px, чтобы не расползалось */
+    padding: 30px 0; /* Уменьшили с 60px */
 }
 
 /* КАРТОЧКИ: НЕЖНО-ГОЛУБОЙ */
 .profile-card {
     background: #e1efff;
-    padding: 50px; /* Увеличил внутренние отступы */
-    border-radius: 40px;
+    padding: 30px; /* Уменьшили с 50px */
+    border-radius: 30px; /* Было 40px */
     border: 1px solid #cce3ff;
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .profile-card:hover {
-    transform: translateY(-15px) scale(1.02);
-    box-shadow: 0 40px 70px rgba(59, 130, 246, 0.25);
+    transform: translateY(-8px) scale(1.01); /* Уменьшили амплитуду прыжка */
+    box-shadow: 0 20px 40px rgba(59, 130, 246, 0.15);
     background: #d4e8ff;
 }
 
@@ -33,250 +33,122 @@ body {
 .grid-layout {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 40px;
+    gap: 25px; /* Уменьшили с 40px */
 }
 
-/* ГИГАНТСКИЙ HEADER */
+/* HEADER */
 .hero-card {
     grid-column: span 2;
     flex-direction: row;
     display: flex;
     align-items: center;
-    gap: 80px;
+    gap: 50px; /* Уменьшили с 80px */
     background: linear-gradient(135deg, #e1efff 0%, #bbdbff 100%);
 }
 
 .profile-pic {
-    width: 280px; /* Фото стало больше */
-    height: 280px;
+    width: 180px; /* Уменьшили с 280px */
+    height: 180px;
     border-radius: 50%;
-    border: 12px solid #ffffff;
+    border: 8px solid #ffffff; /* Уменьшили с 12px */
     object-fit: cover;
 }
 
-h1 { font-size: 6.5rem; margin: 0; font-weight: 700; line-height: 0.8; color: #0f172a; }
-.subtitle { font-size: 3rem; color: #3b82f6; margin: 20px 0; font-weight: 600; }
-h2 { font-size: 3.2rem; margin: 0; font-weight: 700; color: #1e3a8a; }
+/* ШРИФТЫ (ОСНОВНОЕ УМЕНЬШЕНИЕ) */
+h1 { font-size: 4rem; margin: 0; font-weight: 700; line-height: 0.9; color: #0f172a; } /* Было 6.5rem */
+.subtitle { font-size: 2rem; color: #3b82f6; margin: 10px 0; font-weight: 600; } /* Было 3rem */
+h2 { font-size: 2.2rem; margin: 0; font-weight: 700; color: #1e3a8a; } /* Было 3.2rem */
 
-.contact-line { display: flex; gap: 40px; font-size: 1.6rem; color: #4a5568; margin-top: 30px; font-weight: 500; }
+.contact-line { display: flex; gap: 30px; font-size: 1.2rem; color: #4a5568; margin-top: 20px; font-weight: 500; }
 
 /* ТЕКСТ В КАРТОЧКАХ */
-.huge-text { font-size: 1.8rem; line-height: 1.4; font-weight: 400; }
+.huge-text { font-size: 1.25rem; line-height: 1.4; font-weight: 400; } /* Было 1.8rem */
 
 /* НАВЫКИ */
 .skills-flex {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
-    margin-top: 30px;
+    gap: 12px; /* Было 20px */
+    margin-top: 20px;
 }
 
 .skill-item {
     background: #ffffff;
-    padding: 20px 30px;
-    border-radius: 20px;
-    font-size: 1.6rem;
+    padding: 12px 20px; /* Было 20x30 */
+    border-radius: 15px;
+    font-size: 1.1rem; /* Было 1.6rem */
     font-weight: 700;
     transition: 0.3s;
-}
-
-.skill-item:hover {
-    background: #3b82f6;
-    color: white;
-    box-shadow: 0 0 40px rgba(59, 130, 246, 0.9);
-    transform: scale(1.1);
 }
 
 /* ЯЗЫКИ */
 .lang-container {
     display: flex;
-    gap: 25px;
-    margin-top: 30px;
+    gap: 15px;
+    margin-top: 20px;
 }
 
 .lang-chip {
     flex: 1;
     background: #ffffff;
-    padding: 30px;
+    padding: 20px; /* Было 30px */
     text-align: center;
-    border-radius: 25px;
-    font-size: 1.8rem;
+    border-radius: 18px;
+    font-size: 1.3rem; /* Было 1.8rem */
     font-weight: 700;
-    transition: 0.3s;
-}
-
-.lang-chip:hover {
-    background: #3b82f6;
-    color: white;
-    box-shadow: 0 0 30px rgba(59, 130, 246, 0.6);
 }
 
 /* КНОПКИ */
 .action-buttons {
     display: flex;
-    gap: 30px;
-    margin-top: 30px;
+    gap: 20px;
+    margin-top: 20px;
 }
 
 .btn {
     flex: 1;
-    padding: 30px;
+    padding: 20px; /* Было 30px */
     text-align: center;
     text-decoration: none;
-    border-radius: 25px;
-    font-size: 2rem;
+    border-radius: 18px;
+    font-size: 1.4rem; /* Было 2rem */
     font-weight: 700;
     transition: 0.3s;
 }
 
-.email-btn { background: #3b82f6; color: white; }
-.wa-btn { background: #25d366; color: white; }
-
-.btn:hover { filter: brightness(1.1); transform: scale(1.05); }
-
 /* ОБРАЗОВАНИЕ */
-.edu-block { margin-top: 25px; }
-.edu-title { font-size: 1.8rem; font-weight: 700; margin: 0; color: #1e3a8a; }
-.edu-subtext { font-size: 1.5rem; color: #4a5568; margin-top: 10px; }
-.edu-separator { height: 3px; background: #cce3ff; margin: 30px 0; }
+.edu-block { margin-top: 15px; }
+.edu-title { font-size: 1.3rem; font-weight: 700; margin: 0; color: #1e3a8a; } /* Было 1.8rem */
+.edu-subtext { font-size: 1.1rem; color: #4a5568; margin-top: 8px; }
+.edu-separator { height: 2px; background: #cce3ff; margin: 20px 0; }
 
-.project-card h3 { font-size: 2rem; margin-bottom: 15px; color: #1e40af; }
+.project-card h3 { font-size: 1.5rem; margin-bottom: 10px; color: #1e40af; }
 
-.card-header { display: flex; align-items: center; gap: 25px; margin-bottom: 30px; }
-.main-icon { font-size: 3.5rem; }
+.card-header { display: flex; align-items: center; gap: 15px; margin-bottom: 20px; }
+.main-icon { font-size: 2.5rem; } /* Было 3.5rem */
 
-footer { text-align: center; margin-top: 100px; font-size: 1.5rem; color: #a0aec0; }
+footer { text-align: center; margin-top: 60px; font-size: 1.1rem; color: #a0aec0; }
 
-/* ФИНАЛЬНАЯ ВЕРСИЯ ДЛЯ ТЕЛЕФОНА */
+/* ТВОЯ МОБИЛЬНАЯ ВЕРСИЯ (БЕЗ ИЗМЕНЕНИЙ) */
 @media (max-width: 1200px) {
-    .container {
-        width: 95%; /* Чуть больше места по бокам */
-        padding: 20px 0;
-    }
-
-    /* Все блоки теперь идут один за другим и имеют одинаковую ширину */
-    .grid-layout { 
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    /* Каждая карточка подстраивается под контент, но выглядит единообразно */
-    .profile-card {
-        padding: 25px;
-        border-radius: 25px;
-        width: 100%;
-        box-sizing: border-box; /* Чтобы паддинги не раздували блоки */
-    }
-
-    /* Главная карточка с фото */
-    .hero-card { 
-        flex-direction: column; 
-        text-align: center; 
-        gap: 20px;
-    }
-
-    .profile-pic {
-        width: 160px; 
-        height: 160px;
-        margin: 0 auto;
-    }
-
-    /* Текст имени: теперь он крупный и читабельный */
-    h1 { 
-        font-size: 2.8rem; 
-        line-height: 1.1;
-        width: 100%;
-    }
-
+    .container { width: 95%; padding: 20px 0; }
+    .grid-layout { display: flex; flex-direction: column; gap: 20px; }
+    .profile-card { padding: 25px; border-radius: 25px; width: 100%; box-sizing: border-box; }
+    .hero-card { flex-direction: column; text-align: center; gap: 20px; }
+    .profile-pic { width: 160px; height: 160px; margin: 0 auto; }
+    h1 { font-size: 2.8rem; line-height: 1.1; width: 100%; }
     .subtitle { font-size: 1.6rem; }
-
-    /* Контакты: теперь они не слипаются */
-    .contact-line { 
-        flex-direction: column; 
-        gap: 10px;
-        font-size: 1.2rem;
-    }
-
-    /* Кнопки WhatsApp/Email: одинакового размера на весь экран */
-    .action-buttons {
-        flex-direction: column;
-        width: 100%;
-    }
-
-    .btn {
-        width: 100%;
-        padding: 20px;
-        font-size: 1.5rem;
-    }
-
-    /* Навыки и языки: делаем так, чтобы они не вылезали за края */
-    .skills-flex, .lang-container {
-        flex-direction: column;
-        width: 100%;
-    }
-
-    .skill-item, .lang-chip {
-        width: 100%;
-        text-align: center;
- 
-    }
-    /* Делаем ячейки навыков меньше и в два ряда */
-    .skills-flex {
-        display: grid;
-        grid-template-columns: 1fr 1fr; /* Две колонки вместо одной */
-        gap: 10px;
-        margin-top: 15px;
-    }
-
-    .skill-item {
-        padding: 12px 10px; /* Уменьшаем внутренний размер ячейки */
-        font-size: 1.1rem;   /* Уменьшаем шрифт текста */
-        text-align: center;
-        border-radius: 12px;
-    }
-
-    /* Языки тоже делаем аккуратнее */
-    .lang-container {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 10px;
-    }
-
-    .lang-chip {
-        padding: 15px;
-        font-size: 1.1rem;
-        border-radius: 15px;
-    }
-    /* Исправляем заголовки внутри карточек (About, Education, Skills) */
-    h2 { 
-        font-size: 1.8rem; /* Уменьшаем, чтобы заголовки не вылезали */
-        margin-bottom: 10px;
-    }
-
-    /* Исправляем блок образования */
-    .edu-title { 
-        font-size: 1.2rem; /* Название лицея/университета */
-        line-height: 1.3;
-    }
-
-    .edu-subtext { 
-        font-size: 1rem; 
-    }
-
-    /* Делаем иконки в заголовках чуть меньше */
-    .main-icon { 
-        font-size: 2rem; 
-    }
-
-    /* Убираем гигантские отступы между секциями образования */
-    .edu-separator { 
-        margin: 15px 0; 
-    }
-    
-    /* Текст в карточках About Me и Education */
-    .huge-text {
-        font-size: 1.1rem;
-        line-height: 1.5;
-    }
+    .contact-line { flex-direction: column; gap: 10px; font-size: 1.2rem; }
+    .action-buttons { flex-direction: column; width: 100%; }
+    .btn { width: 100%; padding: 20px; font-size: 1.5rem; }
+    .skills-flex { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 15px; }
+    .skill-item { padding: 12px 10px; font-size: 1.1rem; text-align: center; border-radius: 12px; }
+    .lang-container { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+    .lang-chip { padding: 15px; font-size: 1.1rem; border-radius: 15px; }
+    h2 { font-size: 1.8rem; margin-bottom: 10px; }
+    .edu-title { font-size: 1.2rem; line-height: 1.3; }
+    .edu-subtext { font-size: 1rem; }
+    .main-icon { font-size: 2rem; }
+    .edu-separator { margin: 15px 0; }
+    .huge-text { font-size: 1.1rem; line-height: 1.5; }
 }
