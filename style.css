@@ -219,5 +219,33 @@ footer { text-align: center; margin-top: 100px; font-size: 1.5rem; color: #a0aec
     .skill-item, .lang-chip {
         width: 100%;
         text-align: center;
+ 
+    }
+    /* Делаем ячейки навыков меньше и в два ряда */
+    .skills-flex {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* Две колонки вместо одной */
+        gap: 10px;
+        margin-top: 15px;
+    }
+
+    .skill-item {
+        padding: 12px 10px; /* Уменьшаем внутренний размер ячейки */
+        font-size: 1.1rem;   /* Уменьшаем шрифт текста */
+        text-align: center;
+        border-radius: 12px;
+    }
+
+    /* Языки тоже делаем аккуратнее */
+    .lang-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
+    .lang-chip {
+        padding: 15px;
+        font-size: 1.1rem;
+        border-radius: 15px;
     }
 }
