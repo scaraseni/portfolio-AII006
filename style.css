@@ -147,10 +147,60 @@ h2 { font-size: 3.2rem; margin: 0; font-weight: 700; color: #1e3a8a; }
 
 footer { text-align: center; margin-top: 100px; font-size: 1.5rem; color: #a0aec0; }
 
-/* МОБИЛЬНАЯ ВЕРСИЯ */
+/* КРАСИВАЯ МОБИЛЬНАЯ ВЕРСИЯ */
 @media (max-width: 1200px) {
-    .grid-layout { grid-template-columns: 1fr; }
-    .hero-card { grid-column: span 1; flex-direction: column; text-align: center; gap: 40px; }
-    h1 { font-size: 4rem; }
-    .subtitle { font-size: 2.2rem; }
+    /* Делаем сетку в одну колонку */
+    .grid-layout { 
+        grid-template-columns: 1fr; 
+    }
+
+    /* Главная карточка: фото и текст на всю ширину */
+    .hero-card { 
+        grid-column: span 1; 
+        flex-direction: column; /* Элементы один под другим */
+        text-align: center; 
+        gap: 30px; 
+        padding: 40px 20px;
+    }
+
+    /* Имя: на всю ширину, крупно, но чтобы влезло */
+    h1 { 
+        font-size: clamp(3rem, 10vw, 4.5rem); /* Размер подстроится под экран */
+        line-height: 1;
+        width: 100%;
+        word-wrap: break-word; /* Чтобы длинное имя не вылетало за экран */
+    }
+
+    /* Подзаголовок (Software Engineer) */
+    .subtitle {
+        font-size: 2rem;
+        margin: 10px 0;
+    }
+
+    /* Фото: центрируем и делаем оптимального размера */
+    .profile-pic {
+        width: 240px; 
+        height: 240px;
+        margin: 0 auto;
+        border-width: 8px; /* Чуть тоньше рамка для мобильного */
+    }
+
+    /* Контакты: выстраиваем в удобный список */
+    .contact-line { 
+        flex-direction: column; 
+        gap: 15px;
+        align-items: center;
+        font-size: 1.3rem;
+    }
+
+    /* Кнопки WhatsApp и Email: на всю ширину, чтобы было удобно нажимать пальцем */
+    .action-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .btn {
+        width: 100%;
+        box-sizing: border-box;
+    }
 }
